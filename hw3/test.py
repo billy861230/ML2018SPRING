@@ -12,7 +12,7 @@ from keras.models import load_model
 import csv
 
 model = load_model('my_model.hdf5')
-print(model.summary())
+#print(model.summary())
 
 test = open(sys.argv[1], 'r')
 string = test.read()
