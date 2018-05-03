@@ -1,0 +1,1 @@
+python3 cluster_pca.py $1 $2 $3
