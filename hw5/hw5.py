@@ -25,7 +25,7 @@ parser.add_argument('action', choices=['train', 'test', 'semi', 'token'])
 
 # training argument
 parser.add_argument('--batch_size', default=128, type=float)
-parser.add_argument('--nb_epoch', default=10, type=int)
+parser.add_argument('--nb_epoch', default=20, type=int)
 parser.add_argument('--val_ratio', default=0.1, type=float)
 parser.add_argument('--gpu_fraction', default=0.3, type=float)
 parser.add_argument('--vocab_size', default=20000, type=int)
@@ -114,7 +114,7 @@ def main():
         dm.add_data('test_data', test_path, False)
     else:
         dm.add_data('train_data', train_path, True)
-        #dm.add_data('semi_data', semi_path, False)
+        dm.add_data('semi_data', semi_path, False)
 
     # prepare tokenizer
     print('get Tokenizer...')
